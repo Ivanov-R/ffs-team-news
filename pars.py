@@ -1,4 +1,5 @@
 import os
+import time
 
 import pandas as pd
 import requests
@@ -33,5 +34,7 @@ def parse(url=URL_TEMPLATE):
     return result_list
 
 
-df = pd.DataFrame(parse())
-df.to_excel(FILE_NAME)
+while True:
+    df = pd.DataFrame(parse())
+    df.to_excel(FILE_NAME)
+    time.sleep(1800)
