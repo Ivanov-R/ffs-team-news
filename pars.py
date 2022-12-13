@@ -11,7 +11,7 @@ load_dotenv()
 
 token = os.getenv("TOKEN")
 bot = Bot(token=token)
-chat_id = 620090788
+chat_id = os.getenv("CHAT_ID")
 
 result_list = []
 URL_TEMPLATE = "https://www.fantasyfootballscout.co.uk/team-news/"
